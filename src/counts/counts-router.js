@@ -9,7 +9,7 @@ const jsonParser = express.json()
 const serializeCount = count => ({
     id: String(count.id),
     name: count.name,
-    count: count.count,
+    counts: count.counts,
     dollars: count.dollars
   })
 
