@@ -9,7 +9,8 @@ const jsonParser = express.json()
 const serializeCount = count => ({
     id: String(count.id),
     name: count.name,
-    count: count.counts
+    count: count.count,
+    dollars: count.dollars
   })
 
 countsRouter
@@ -27,11 +28,12 @@ countsRouter
 countsRouter
   .route('/:count_name')
   .patch(jsonParser, (req, res, next) => {
-    const { counts } = req.body
+    const { counts, dollars } = req.body
     console.log(req.body)
     CountService.updateCounts(
       req.app.get('db'),
       counts,
+      dollars,
       req.params.count_name
     )
       .then(counts => {

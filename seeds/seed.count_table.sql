@@ -1,7 +1,8 @@
-INSERT into counts (name,counts)
+INSERT into counts (name,counts,dollars)
 values
-('GreaterThan',0),
-('Total',0),
-('Epic',0),
-('GOG',0),
-('Origin',0)
+('greater',0,0),
+('total',0,0),
+('epic',0,0),
+('gog',0,0),
+('origin',0,0),
+('totalDollars',0,0)

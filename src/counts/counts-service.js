@@ -3,11 +3,12 @@ const CountService = {
         console.log(knex)
         return knex.select('*').from('counts')
     },
-    updateCounts(knex, newCount, name) {
+    updateCounts(knex, newCount, dollars, name) {
         return knex('counts')
         .where({ name: name })
         .update({
-            counts: newCount
+            counts: newCount,
+            dollars: dollars
         })
         .returning('*')
     }
