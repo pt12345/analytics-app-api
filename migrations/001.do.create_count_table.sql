@@ -3,5 +3,5 @@ CREATE TABLE counts (
     name TEXT NOT NULL,
     modified TIMESTAMPTZ DEFAULT now() NOT NULL,
     counts INTEGER DEFAULT 0,
-    dollars MONEY DEFAULT 0
+    dollars FLOAT DEFAULT 0
 );
