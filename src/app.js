@@ -18,10 +18,6 @@ app.use(cors())
 
 app.use('/api/counts', countsRouter)
 
-app.get('/', (req, res) => {
-    res.send('Hello, worlds!')
-})
-
 app.use(function errorHandler(error, req, res, next) {
     let response
     if (NODE_ENV === 'production') {
